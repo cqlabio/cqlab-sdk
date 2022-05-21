@@ -1,11 +1,11 @@
-// export const hello = 'jejej'
+import * as https from 'https';
 
-// import * as https from 'https';
 import axios, { AxiosInstance } from 'axios';
 
-// import got, { Got } from 'got';
-import { DEFAULT_HOST_URL } from './constants';
 import { LibraryVersion, LibraryVersionSearchByName } from './libraryVersion';
+import { TestData } from './testData';
+import { DEFAULT_HOST_URL } from './types';
+import { ValueSetVersion } from './valueSetVersion';
 
 type CQLabOptions = {
   readonly apiToken?: string;
@@ -31,18 +31,49 @@ export class CQLab {
     this.axiosInstance = axios.create({
       baseURL: `${this.hostUrl}/v1`,
       headers: headers,
-      // httpsAgent: new https.Agent({
-      //   rejectUnauthorized: false
-      // })
+      // This should not be necessary since the SSL cert should be public and trusted?
+      // https://stackoverflow.com/questions/51363855/how-to-configure-axios-to-use-ssl-certificate
+      httpsAgent:
+        this.hostUrl === DEFAULT_HOST_URL
+          ? new https.Agent({
+              rejectUnauthorized: false,
+            })
+          : undefined,
     });
+  }
+
+  async fetchLibraryVersionById(
+    libraryVersionId: string
+  ): Promise<LibraryVersion> {
+    const libraryVersion = new LibraryVersion({ config: this });
+    await libraryVersion.loadMetaById(libraryVersionId);
+    await libraryVersion.loadExecutionContext();
+    return libraryVersion;
   }
 
   async fetchLibraryVersionByName(
     params: LibraryVersionSearchByName
   ): Promise<LibraryVersion> {
     const libraryVersion = new LibraryVersion({ config: this });
-    await libraryVersion.fetchByName({ ...params });
-    await libraryVersion.fetchExecutionContext();
+    await libraryVersion.loadMetaByName({ ...params });
+    await libraryVersion.loadExecutionContext();
     return libraryVersion;
+  }
+
+  async fetchValueSetVersionById(
+    valueSetVersionId: string
+  ): Promise<ValueSetVersion> {
+    const valueSetVersion = new ValueSetVersion({ config: this });
+    await valueSetVersion.loadMetaById(valueSetVersionId);
+    await valueSetVersion.loadCodeContext();
+    return valueSetVersion;
+  }
+
+  async fetchTestDataById(
+    testDataId: string
+  ): Promise<TestData> {
+    const valueSetVersion = new TestData({ config: this });
+    await valueSetVersion.loadMetaById(testDataId);
+    return valueSetVersion;
   }
 }

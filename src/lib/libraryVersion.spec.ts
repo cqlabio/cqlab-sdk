@@ -1,17 +1,33 @@
 import test from 'ava';
-import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 
 import { CQLab } from './CQLab';
 import { LibraryVersion } from './libraryVersion';
-// import {DEFAULT_HOST_URL } from './constants'
 import { MockPatient1 } from './mockBundles';
 import medXExecutionContext from './testFixtures/medXExecutionContext.json';
 import medXLibraryVersion from './testFixtures/medXLibraryVersion.json';
 
-// This sets the mock adapter on the default instance
-
 const MOCK_BASE = 'http://mock-api';
+
+test('getLibraryVersionById', async (t) => {
+  const cqlab = new CQLab({
+    hostUrl: MOCK_BASE,
+  });
+
+  const mock = new MockAdapter(cqlab.axiosInstance);
+
+  const FAKE_ID = '1234';
+
+  mock
+    .onGet(`${MOCK_BASE}/v1/library-versions/${FAKE_ID}`)
+    .reply(200, medXLibraryVersion);
+
+  const libraryVersion = new LibraryVersion({ config: cqlab });
+
+  await libraryVersion.loadMetaById(FAKE_ID);
+
+  t.deepEqual(libraryVersion._libraryVersion, medXLibraryVersion);
+});
 
 test('getLibraryVersionByName', async (t) => {
   const cqlab = new CQLab({
@@ -32,7 +48,7 @@ test('getLibraryVersionByName', async (t) => {
 
   const libraryVersion = new LibraryVersion({ config: cqlab });
 
-  await libraryVersion.fetchByName({
+  await libraryVersion.loadMetaByName({
     labName: 'learn',
     libraryName: 'MedX',
     version: 'Draft',
@@ -56,9 +72,22 @@ test('fetchExecutionContext', async (t) => {
 
   const libraryVersion = new LibraryVersion({ config: cqlab });
 
-  libraryVersion._libraryVersion = medXLibraryVersion;
+  libraryVersion._id = medXLibraryVersion.id;
 
-  await libraryVersion.fetchExecutionContext();
+  await libraryVersion.loadExecutionContext();
+
+  t.deepEqual(libraryVersion._executionContext, medXExecutionContext);
+});
+
+test('should execute correctly', async (t) => {
+  const cqlab = new CQLab({
+    hostUrl: MOCK_BASE,
+  });
+
+  const libraryVersion = new LibraryVersion({ config: cqlab });
+
+  libraryVersion._libraryVersion = medXLibraryVersion;
+  libraryVersion._executionContext = medXExecutionContext;
 
   const results = libraryVersion.execute(MockPatient1);
 

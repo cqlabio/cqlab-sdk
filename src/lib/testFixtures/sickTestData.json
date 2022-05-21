@@ -1,0 +1,9 @@
+{
+  "id": "d226f82b-1b9f-4836-b725-1b48da4752c9",
+  "createdAt": "2022-05-02T22:21:30.530Z",
+  "name": "Sick Patient",
+  "testDataModel": "FHIR41",
+  "data": "{\n  \"resourceType\": \"Bundle\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"fullUrl\": \"urn:uuid:d39222c7-6d00-47eb-ba23-227b318229a7\",\n      \"resource\": {\n        \"id\": \"d39222c7-6d00-47eb-ba23-227b318229a7\",\n        \"resourceType\": \"Patient\",\n        \"gender\": \"female\",\n        \"birthDate\": \"1980-03-20\",\n        \"name\": [\n          {\n            \"use\": \"official\",\n            \"family\": \"Johnson\",\n            \"given\": [\n              \"Edga\",\n              \"Stewart\"\n            ]\n          }\n        ]\n      }\n    }\n  ]\n}",
+  "isPublic": true,
+  "labId": "3d65ee25-92ea-4501-baa2-a78ea59dff5d"
+}

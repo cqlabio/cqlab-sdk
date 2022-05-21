@@ -1,0 +1,20 @@
+{
+  "id": "08272b77-62b5-4d63-a31c-22c5346ee549",
+  "createdAt": "2022-05-10T19:47:30.487Z",
+  "version": "Draft",
+  "isPublished": false,
+  "valueSetId": "1ed6df17-8a1d-4918-91c1-7f96c2e490ec",
+  "valueSet": {
+      "id": "1ed6df17-8a1d-4918-91c1-7f96c2e490ec",
+      "createdAt": "2022-05-10T19:47:30.458Z",
+      "name": "Congestive heart failure",
+      "labId": "3d65ee25-92ea-4501-baa2-a78ea59dff5d",
+      "valueSetType": "Aui",
+      "isPublic": true,
+      "vsacId": null,
+      "rootCui": null,
+      "rootAui": "A2876049",
+      "rootCode": "42343007",
+      "rootSab": "SNOMEDCT_US"
+  }
+}

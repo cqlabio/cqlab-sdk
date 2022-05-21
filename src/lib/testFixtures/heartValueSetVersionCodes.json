@@ -1,0 +1,530 @@
+[
+  {
+      "id": "A2953022",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "10633002",
+      "version": "",
+      "display": "Acute congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A2953022",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A23459685",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "698296002",
+      "version": "",
+      "display": "Acute exacerbation of chronic congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A23459685",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A2953229",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "74960003",
+      "version": "",
+      "display": "Acute left-sided congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A2953229",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A27336134",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "7401000175100",
+      "version": "",
+      "display": "Acute on chronic heart failure co-occurrent with normal ejection fraction",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A27336134",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A31540892",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "16838951000119100",
+      "version": "",
+      "display": "Acute on chronic right-sided congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A31540892",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A2953489",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "80479009",
+      "version": "",
+      "display": "Acute right-sided congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A2953489",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A2995991",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "194767001",
+      "version": "",
+      "display": "Benign hypertensive heart disease with congestive cardiac failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A2995991",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A3304265",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "92506005",
+      "version": "",
+      "display": "Biventricular congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A3304265",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A2957879",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "88805009",
+      "version": "",
+      "display": "Chronic congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A2957879",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A2958092",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "5375005",
+      "version": "",
+      "display": "Chronic left-sided congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A2958092",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A2958261",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "66989003",
+      "version": "",
+      "display": "Chronic right-sided congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A2958261",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A2876049",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "42343007",
+      "version": "",
+      "display": "Congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A2876049",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A23463973",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "72481000119103",
+      "version": "",
+      "display": "Congestive heart failure as early postoperative complication",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A23463973",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A25679756",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "285211000119102",
+      "version": "",
+      "display": "Congestive heart failure as post-operative complication of cardiac surgery",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A25679756",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A25680487",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "285221000119109",
+      "version": "",
+      "display": "Congestive heart failure as post-operative complication of non-cardiac surgery",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A25680487",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A23459656",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "101281000119107",
+      "version": "",
+      "display": "Congestive heart failure due to cardiomyopathy",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A23459656",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A13004805",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "426263006",
+      "version": "",
+      "display": "Congestive heart failure due to left ventricular systolic dysfunction",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A13004805",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A13004804",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "426611007",
+      "version": "",
+      "display": "Congestive heart failure due to valvular disease",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A13004804",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A27772964",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "717840005",
+      "version": "",
+      "display": "Congestive heart failure stage B",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A27772964",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A27769693",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "15629591000119103",
+      "version": "",
+      "display": "Congestive heart failure stage B due to ischemic cardiomyopathy",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A27769693",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A21111174",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "67441000119101",
+      "version": "",
+      "display": "Congestive heart failure stage C",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A21111174",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A31542316",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "15629541000119106",
+      "version": "",
+      "display": "Congestive heart failure stage C due to ischemic cardiomyopathy",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A31542316",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A21111173",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "67431000119105",
+      "version": "",
+      "display": "Congestive heart failure stage D",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A21111173",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A23456927",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "23341000119109",
+      "version": "",
+      "display": "Congestive heart failure with right heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A23456927",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A2960389",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "82523003",
+      "version": "",
+      "display": "Congestive rheumatic heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A2960389",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A21114045",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "96311000119109",
+      "version": "",
+      "display": "Exacerbation of congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A21114045",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A23447016",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "15781000119107",
+      "version": "",
+      "display": "Hypertensive heart AND chronic kidney disease with congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A23447016",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A3143243",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "194779001",
+      "version": "",
+      "display": "Hypertensive heart and renal disease with (congestive) heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A3143243",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A3143244",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "194781004",
+      "version": "",
+      "display": "Hypertensive heart and renal disease with both (congestive) heart failure and renal failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A3143244",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A2967847",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "5148006",
+      "version": "",
+      "display": "Hypertensive heart disease with congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A2967847",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A2893023",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "83105008",
+      "version": "",
+      "display": "Malignant hypertensive heart disease with congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A2893023",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A2979874",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "43736008",
+      "version": "",
+      "display": "Rheumatic left ventricular failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A2979874",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  },
+  {
+      "id": "A23461758",
+      "createdAt": "2022-05-10T19:47:30.487Z",
+      "code": "698594003",
+      "version": "",
+      "display": "Symptomatic congestive heart failure",
+      "codeSystemId": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+      "sourceAui": "A23461758",
+      "codeSystem": {
+          "id": "f76d6eef-b218-4fd2-aea4-44889acda17d",
+          "createdAt": "2022-05-10T17:42:33.444Z",
+          "name": "SNOMEDCT_US",
+          "url": "http://snomed.info/sct",
+          "verified": true
+      }
+  }
+]

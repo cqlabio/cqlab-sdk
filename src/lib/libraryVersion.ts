@@ -2,11 +2,14 @@ import cqlfhir from 'cql-exec-fhir';
 import cqlExecution from 'cql-execution';
 
 import { CQLab } from './CQLab';
-// import {  LATEST } from './constants'
-import { ServerLibraryVersion } from './server.types';
+import {
+  ServerLibraryVersion,
+  ServerLibraryVersionExecutionContext,
+} from './types';
 
 export interface LibraryVersionOptions {
   config: CQLab;
+  _id?: string;
 }
 
 export interface LibraryVersionSearchByName {
@@ -18,18 +21,27 @@ export interface LibraryVersionSearchByName {
 export class LibraryVersion {
   config: CQLab;
 
+  _id?: string;
   _libraryVersion?: ServerLibraryVersion;
-
-  cql?: string;
-  elm?: any;
-  valueSetMap?: any;
-  includedLibraries?: any;
+  _executionContext?: ServerLibraryVersionExecutionContext;
 
   constructor(options: LibraryVersionOptions) {
     this.config = options.config;
+
+    if (options._id) {
+      this._id = options._id;
+    }
   }
 
-  async fetchByName({
+  async loadMetaById(libraryVersionId: string): Promise<void> {
+    const { data } = await this.config.axiosInstance.get<ServerLibraryVersion>(
+      `library-versions/${libraryVersionId}`
+    );
+
+    this._libraryVersion = data;
+  }
+
+  async loadMetaByName({
     labName,
     libraryName,
     version,
@@ -45,59 +57,40 @@ export class LibraryVersion {
       }
     );
 
-    // const res = await this.config.gotInstance.get('libraries/search-one', {
-    //   searchParams: {
-    //         labName: labName,
-    //         libraryName: libraryName,
-    //         version: version || LATEST
-    //       }
-    // })
-
-    // console.log('er;', res)
-
+    this._id = data.id;
     this._libraryVersion = data;
-
-    // this.labId = data.libraryVersion.labId
-    // this.libraryId = data.libraryVersion.libraryId
-    // this.libraryVersionId = data.libraryVersion.id
-
-    // this.libraryName =  data.libraryVersion.library.name
-    // this.version =  data.version
   }
 
-  async fetchExecutionContext() {
-    if (!this._libraryVersion) {
-      throw new Error('libraryVersion is required to make this call');
+  async loadExecutionContext() {
+    if (!this._id) {
+      throw new Error('_id is required to fetch context');
     }
 
-    const res = await this.config.axiosInstance.get<any>(
-      `library-versions/${this._libraryVersion.id}/execution-context`
-    );
-    // const res = await this.config.gotInstance.get(`library-versions/${this.libraryVersionId}/execution-context`)
+    const { data } =
+      await this.config.axiosInstance.get<ServerLibraryVersionExecutionContext>(
+        `library-versions/${this._id}/execution-context`
+      );
 
-    // console.log(res)
-
-    this.cql = res.data.cql;
-    this.elm = res.data.elm;
-    this.includedLibraries = res.data.includedLibraries;
-    this.valueSetMap = res.data.valueSetMap;
+    this._executionContext = data;
   }
 
   executeMany(bundles: fhir4.Bundle[]): Record<string, Record<string, any>> {
-    if (!this.elm) {
-      throw new Error('Must load ELM using fetchExecutionContext');
+    if (!this._executionContext) {
+      throw new Error('Must load ExecutionContext using fetchExecutionContext');
     }
 
-    const includedElm = this.includedLibraries.map(
-      (included: any) => included.elm
+    const includedElm = this._executionContext.includedLibraries.map(
+      (included) => included.elm
     );
 
     const lib = new cqlExecution.Library(
-      this.elm,
+      this._executionContext.elm,
       new cqlExecution.Repository(includedElm)
     );
 
-    const codeService = new cqlExecution.CodeService(this.valueSetMap);
+    const codeService = new cqlExecution.CodeService(
+      this._executionContext.valueSetMap
+    );
     const executor = new cqlExecution.Executor(lib, codeService);
 
     const patientSource = cqlfhir.PatientSource.FHIRv401();
