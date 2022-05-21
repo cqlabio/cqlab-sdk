@@ -1,10 +1,11 @@
+import cqlfhir from 'cql-exec-fhir';
 import cqlExecution from 'cql-execution';
-import { CQLab } from './cqlab-sdk'
+
+import { CQLab } from './CQLab'
 import {  LATEST } from './constants'
 
 // Why?
-// import cqlfhir from 'cql-exec-fhir';
-const cqlfhir = require('cql-exec-fhir');
+// const cqlfhir = require('cql-exec-fhir');
 
 export interface LibraryVersionOptions {
   config: CQLab
@@ -41,7 +42,7 @@ export class LibraryVersion {
   version
   }: LibraryVersionSearchByName): Promise<void> {
 
-    const res = await this.config.axiosInstance.get('libraries/search-one', {
+    const {data} = await this.config.axiosInstance.get<any>('libraries/search-one', {
       params: {
         labName: labName,
         libraryName: libraryName,
@@ -49,12 +50,22 @@ export class LibraryVersion {
       }
     })
 
-    this.labId = res.data.libraryVersion.labId
-    this.libraryId = res.data.libraryVersion.libraryId
-    this.libraryVersionId = res.data.libraryVersion.id
+    // const res = await this.config.gotInstance.get('libraries/search-one', {
+    //   searchParams: {
+    //         labName: labName,
+    //         libraryName: libraryName,
+    //         version: version || LATEST
+    //       }
+    // })
+
+    // console.log('er;', res)
+
+    this.labId = data.libraryVersion.labId
+    this.libraryId = data.libraryVersion.libraryId
+    this.libraryVersionId = data.libraryVersion.id
     
-    this.libraryName =  res.data.libraryVersion.library.name
-    this.version =  res.data.version
+    this.libraryName =  data.libraryVersion.library.name
+    this.version =  data.version
   }
   
   async fetchExecutionContext() {
@@ -62,7 +73,10 @@ export class LibraryVersion {
       throw new Error('libraryVersionId is required to make this call')
     }
 
-    const res = await this.config.axiosInstance.get(`library-versions/${this.libraryVersionId}/execution-context`)
+    const res = await this.config.axiosInstance.get<any>(`library-versions/${this.libraryVersionId}/execution-context`)
+    // const res = await this.config.gotInstance.get(`library-versions/${this.libraryVersionId}/execution-context`)
+
+    // console.log(res)
 
     this.cql = res.data.cql;
     this.elm = res.data.elm;
@@ -70,7 +84,7 @@ export class LibraryVersion {
     this.valueSetMap = res.data.valueSetMap;
   }
 
-  execute (bundles: any[]) {
+  executeMany (bundles: fhir4.Bundle[]) {
     if (!this.elm) {
       throw new Error('Must load ELM using fetchExecutionContext')
     }
@@ -89,8 +103,12 @@ export class LibraryVersion {
     patientSource.loadBundles(bundles);
     
     const results = executor.exec(patientSource);
-    
     return results.patientResults
   }
 
+  execute (bundle: fhir4.Bundle): any {
+    const patientResults = this.executeMany([bundle])
+    const patientValues = Object.values(patientResults)
+    return patientValues.length === 1 ? patientValues[0] : null
+  }
 }
