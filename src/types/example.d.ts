@@ -22,3 +22,5 @@ declare module 'module-name' {
   const whatever: any;
   export = whatever;
 }
+
+declare module 'cql-exec-fhir';

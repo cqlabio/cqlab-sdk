@@ -8,7 +8,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cqlabio/cqlab-sdk"
-  },  "license": "MIT",
+  },
+  "license": "MIT",
   "keywords": [
     "cqlab",
     "cql",
@@ -50,6 +51,7 @@
     "node": ">=10"
   },
   "dependencies": {
+    "@types/luxon": "^2.3.2",
     "axios": "^0.27.2",
     "cql-exec-fhir": "^2.0.2",
     "cql-execution": "^2.4.1"
@@ -61,6 +63,7 @@
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "ava": "^3.12.1",
+    "axios-mock-adapter": "^1.20.0",
     "codecov": "^3.5.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.8.0",

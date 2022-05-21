@@ -1,0 +1,17 @@
+{
+  "id": "19bfbb5d-caa3-484c-99a2-c68ed516320e",
+  "createdAt": "2022-05-10T17:44:26.041Z",
+  "version": "Draft",
+  "cql": null,
+  "elm": null,
+  "isPublished": false,
+  "dataModel": "FHIR41",
+  "libraryId": "baa81def-e9d8-41d2-a644-a9aad3454017",
+  "library": {
+      "id": "baa81def-e9d8-41d2-a644-a9aad3454017",
+      "createdAt": "2022-05-10T17:44:25.974Z",
+      "name": "MedX",
+      "labId": "3d65ee25-92ea-4501-baa2-a78ea59dff5d",
+      "isPublic": true
+  }
+}

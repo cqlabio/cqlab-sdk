@@ -3,42 +3,22 @@
   "type": "transaction",
   "entry": [
     {
-      "fullUrl": "urn:uuid:da18d228-e7b7-4597-b652-eae9361e8ee5",
+      "fullUrl": "urn:uuid:00147bb8-de9a-4046-8267-40eb8ab04f7c",
       "resource": {
-        "id": "da18d228-e7b7-4597-b652-eae9361e8ee5",
+        "id": "00147bb8-de9a-4046-8267-40eb8ab04f7c",
         "resourceType": "Patient",
-        "gender": "female",
+        "gender": "male",
         "birthDate": "1980-03-20",
         "name": [
           {
             "use": "official",
-            "family": "Moen",
+            "family": "Hoeger",
             "given": [
-              "Lesley",
-              "Meghan"
+              "John",
+              "Sam"
             ]
           }
         ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:68807608-0f44-4333-b20d-9402baaa2b9d",
-      "resource": {
-        "id": "68807608-0f44-4333-b20d-9402baaa2b9d",
-        "resourceType": "Condition",
-        "subject": {
-          "reference": "da18d228-e7b7-4597-b652-eae9361e8ee5",
-          "display": "Lesley Meghan Moen"
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "186875004",
-              "display": "Syphilitic endocarditis of mitral valve"
-            }
-          ]
-        }
       }
     }
   ]
