@@ -4,7 +4,7 @@ The CQLab SDK is the official TypeScript SDK for [cqlab.io](https://cqlab.io).
 
 CQLab is a platform for building, testing, and publishing clinical artifacts built according to [HL7 FHIR](https://fhir.org/) standards.
 
-This SDK provides a convenience wrapper around the CQLab REST API to query artifacts such as [CQL](https://cql.hl7.org/) Files, Value Sets, and FHIR Test Data. It also provides support for executing CQL against FHIR patient bundles using [cql-execution](https://github.com/cqframework/cql-execution).
+This SDK provides a convenience wrapper around the CQLab REST API to query artifacts such as [CQL](https://cql.hl7.org/) Files, [Value Sets](https://www.hl7.org/fhir/valueset.html), and FHIR Test Data. It also provides support for executing CQL against FHIR patient bundles using [cql-execution](https://github.com/cqframework/cql-execution).
 
 ## Code Generation
 
@@ -20,7 +20,7 @@ npm install @cqlab/sdk
 
 ## CQL Library Fetch and Execution
 
-We'll use the example from the walkthrough to illustrate executing CQL. Execute CQL in just 3 lines of code.
+Execute CQL in just 3 lines of code. We'll use the example from the walkthrough to illustrate.
 
 ```js
 import { CQLab, MockPatient1 } from '@cqlab/sdk';
@@ -83,10 +83,11 @@ cqlab
   });
 ```
 
-3. We execute using a provided MockPatient bundle. Replace with your own FHIR data. Notice this execution happens in your execution process (and not on CQLab servers).
+3. We execute using a provided MockPatient bundle. Replace with your own FHIR data. Access each CQL statement execution result in the dictionary.
 
 ```js
 const result = libraryVersion.execute(MockPatient1))
+console.log(result['Is Male']);
 ```
 
 ## Value Set Fetch
@@ -97,16 +98,12 @@ Easily fetch Value Sets Versions using the ID.
 import { CQLab } from '@cqlab/sdk';
 const cqlab = new CQLab();
 
-/**
-Fetch your Value Set Version By ID
-*/
+/** Fetch your Value Set Version By ID */
 const valueSetVersion = await cqlab.fetchValueSetVersionById(
   '3998b6e2-4c58-427b-9297-11339bd61afe'
 );
 
-/**
-Access the codes
-*/
+/** Access the codes */
 const codes = valueSetVersion.getCodes();
 console.log(codes);
 ```
@@ -117,16 +114,12 @@ console.log(codes);
 import { CQLab } from '@cqlab/sdk';
 const cqlab = new CQLab();
 
-/**
-Fetch your Value Set Version By ID
-*/
+/** Fetch your Test Data By ID */
 const testData = await cqlab.fetchTestDataById(
   '3998b6e2-4c58-427b-9297-11339bd61afe'
 );
 
-/**
-Access the codes
-*/
+/** Access the data */
 const data = testData.getData();
 
 console.log(data);
