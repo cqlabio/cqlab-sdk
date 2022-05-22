@@ -1,10 +1,10 @@
 import test from 'ava';
-import axios from 'axios';
-import MockAdapter from 'axios-mock-adapter';
+// import axios from 'axios';
+// import MockAdapter from 'axios-mock-adapter';
 
 import { CQLab } from './CQLab';
-import { MockPatient1 } from './mockBundles';
-import medXLibraryVersion from './testFixtures/medXLibraryVersion.json';
+// import { MockPatient1 } from './mockBundles';
+// import medXLibraryVersion from './testFixtures/medXLibraryVersion.json';
 import { DEFAULT_HOST_URL } from './types';
 
 test('hostUrl should default on empty init', (t) => {

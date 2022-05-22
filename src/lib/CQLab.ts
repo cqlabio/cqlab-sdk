@@ -69,9 +69,7 @@ export class CQLab {
     return valueSetVersion;
   }
 
-  async fetchTestDataById(
-    testDataId: string
-  ): Promise<TestData> {
+  async fetchTestDataById(testDataId: string): Promise<TestData> {
     const valueSetVersion = new TestData({ config: this });
     await valueSetVersion.loadMetaById(testDataId);
     return valueSetVersion;

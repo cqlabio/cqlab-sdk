@@ -42,9 +42,7 @@ test('fetchValueSetCodes', async (t) => {
     .reply(200, heartValueSetVersionCodes);
 
   const valueSetVersion = new ValueSetVersion({ config: cqlab });
-
   valueSetVersion._id = heartValueSetVersion.id;
-
   await valueSetVersion.loadCodeContext();
 
   const codes = valueSetVersion.getCodes();

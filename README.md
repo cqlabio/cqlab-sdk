@@ -1,34 +1,137 @@
-# cqlab-sdk-2
+# CQLab Typescript SDK
 
-cqlab sdk
+The CQLab SDK is the official TypeScript SDK for [cqlab.io](https://cqlab.io).
 
-# Developing with typescript-starter
+CQLab is a platform for building, testing, and publishing clinical artifacts built according to [HL7 FHIR](https://fhir.org/) standards.
 
-## Development zen
+This SDK provides a convenience wrapper around the CQLab REST API to query artifacts such as [CQL](https://cql.hl7.org/) Files, Value Sets, and FHIR Test Data. It also provides support for executing CQL against FHIR patient bundles using [cql-execution](https://github.com/cqframework/cql-execution).
 
-To start working, run the `watch:build` task using [`npm`](https://docs.npmjs.com/getting-started/what-is-npm) or [`yarn`](https://yarnpkg.com/).
+## Code Generation
+
+CQLab generates code for each artifact accessible through the API. Just copy and paste the generated code and execute artifcats on your own machines.
+
+Learn more using a detailed walkthrough available in the [docs](https://cqlab.io).
+
+## Installation
 
 ```sh
-npm run watch:build
+npm install @cqlab/sdk
 ```
 
-In another terminal tab/window, run the `watch:test` task:
+## CQL Library Fetch and Execution
 
-```sh
-npm run watch:test
+We'll use the example from the walkthrough to illustrate executing CQL. Execute CQL in just 3 lines of code.
+
+```js
+import { CQLab, MockPatient1 } from '@cqlab/sdk';
+
+const cqlab = new CQLab();
+
+/** Make sure to wrap await call in an async function */
+const libraryVersion = await cqlab.fetchLibraryVersionByName({
+  labName: 'cq_examples',
+  libraryName: 'CheckMedX',
+  version: 'Draft',
+});
+
+/** Execute your CQL. */
+const result = libraryVersion.execute(MockPatient1);
+console.log(result['Is Male']);
 ```
 
-These watch tasks make development much faster and more interactive. They're particularly helpful for [TDD](https://en.wikipedia.org/wiki/Test-driven_development)/[BDD](https://en.wikipedia.org/wiki/Behavior-driven_development) workflows.
+1. Instantiate the CQLab instance
 
-These watch tasks will build and watch the entire project for changes (to both the library source files and test source files). As you develop, you can add tests for new functionality – which will initially fail – before developing the new functionality. Each time you save, any changes will be rebuilt and retested.
+```js
+const cqlab = new CQLab();
+```
 
-<p align="center">
-  <!-- PR request: capture the magic of using a test-running watch task for development -->
-  <img alt="typescript-starter's watch task" src="https://user-images.githubusercontent.com/904007/37270842-c05f5192-25a6-11e8-83bb-1981ae48e38e.png">
-</p>
+Be sure to provide an apiToken if this is a private resource.
 
-Since only changed files are rebuilt and retested, this workflow remains fast even for large projects.
+```js
+const cqlab = new CQLab({ apiToken: 'my-token-1234' });
+```
 
-### Cloned from starter pack
+2. Next we fetch a specific version of a CQL Library for execution.
+
+```js
+const libraryVersion = await cqlab.fetchLibraryVersionByName({
+  labName: 'cq_examples',
+  libraryName: 'CheckMedX',
+  version: 'Draft',
+});
+```
+
+Alternatively we can fetch the libraryVersion by id
+
+```js
+const libraryVersion = await cqlab.fetchByLibraryVersionId(
+  '28d822ec-96d2-44a0-b5cd-c5312afb549a'
+);
+```
+
+Or use promise syntax:
+
+```js
+cqlab
+  .fetchLibraryVersionByName({
+    labName: 'cq_examples',
+    libraryName: 'CheckMedX',
+    version: 'Draft',
+  })
+  .then((libraryVersion) => {
+    console.log(libraryVersion);
+  });
+```
+
+3. We execute using a provided MockPatient bundle. Replace with your own FHIR data. Notice this execution happens in your execution process (and not on CQLab servers).
+
+```js
+const result = libraryVersion.execute(MockPatient1))
+```
+
+## Value Set Fetch
+
+Easily fetch Value Sets Versions using the ID.
+
+```js
+import { CQLab } from '@cqlab/sdk';
+const cqlab = new CQLab();
+
+/**
+Fetch your Value Set Version By ID
+*/
+const valueSetVersion = await cqlab.fetchValueSetVersionById(
+  '3998b6e2-4c58-427b-9297-11339bd61afe'
+);
+
+/**
+Access the codes
+*/
+const codes = valueSetVersion.getCodes();
+console.log(codes);
+```
+
+## Test Data Fetch
+
+```js
+import { CQLab } from '@cqlab/sdk';
+const cqlab = new CQLab();
+
+/**
+Fetch your Value Set Version By ID
+*/
+const testData = await cqlab.fetchTestDataById(
+  '3998b6e2-4c58-427b-9297-11339bd61afe'
+);
+
+/**
+Access the codes
+*/
+const data = testData.getData();
+
+console.log(data);
+```
+
+### This repo was cloned from starter pack:
 
 Typescript-starter: https://github.com/bitjson/typescript-starter
