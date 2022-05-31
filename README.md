@@ -65,7 +65,7 @@ Alternatively we can fetch the libraryVersion by id
 
 ```js
 const libraryVersion = await cqlab.fetchByLibraryVersionId(
-  '28d822ec-96d2-44a0-b5cd-c5312afb549a'
+  '2a5be06d-6a87-4cdd-8956-73ce4c8b4ee4'
 );
 ```
 
