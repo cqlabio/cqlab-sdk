@@ -100,7 +100,7 @@ const cqlab = new CQLab();
 
 /** Fetch your Value Set Version By ID */
 const valueSetVersion = await cqlab.fetchValueSetVersionById(
-  '3998b6e2-4c58-427b-9297-11339bd61afe'
+  '64331f0c-c00b-4ba0-a02c-f5e4cbad053f'
 );
 
 /** Access the codes */
@@ -116,7 +116,7 @@ const cqlab = new CQLab();
 
 /** Fetch your Test Data By ID */
 const testData = await cqlab.fetchTestDataById(
-  '3998b6e2-4c58-427b-9297-11339bd61afe'
+  'ee69fddd-0142-46c4-936b-e4b447d83018'
 );
 
 /** Access the data */
