@@ -92,7 +92,7 @@ console.log(result['Is Male']);
 
 ## Value Set Fetch
 
-Easily fetch Value Sets Versions using the ID.
+Fetch value set versions using the ID.
 
 ```js
 import { CQLab } from '@cqlab/sdk';

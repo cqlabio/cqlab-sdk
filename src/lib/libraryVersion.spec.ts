@@ -26,6 +26,7 @@ test('getLibraryVersionById', async (t) => {
 
   await libraryVersion.loadMetaById(FAKE_ID);
 
+  t.deepEqual(libraryVersion._id, medXLibraryVersion.id);
   t.deepEqual(libraryVersion._libraryVersion, medXLibraryVersion);
 });
 
@@ -55,6 +56,7 @@ test('getLibraryVersionByName', async (t) => {
   });
 
   t.deepEqual(libraryVersion._libraryVersion, medXLibraryVersion);
+  t.deepEqual(libraryVersion._id, medXLibraryVersion.id);
 });
 
 test('fetchExecutionContext', async (t) => {

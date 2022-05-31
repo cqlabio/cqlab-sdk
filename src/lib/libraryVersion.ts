@@ -38,6 +38,7 @@ export class LibraryVersion {
       `library-versions/${libraryVersionId}`
     );
 
+    this._id = data.id;
     this._libraryVersion = data;
   }
 
