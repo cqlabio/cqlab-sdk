@@ -6,11 +6,13 @@ CQLab is a platform for building, testing, and publishing clinical artifacts bui
 
 This SDK provides a convenience wrapper around the CQLab REST API to query artifacts such as [CQL](https://cql.hl7.org/) Files, [Value Sets](https://www.hl7.org/fhir/valueset.html), and FHIR Test Data. It also provides support for executing CQL against FHIR patient bundles using [cql-execution](https://github.com/cqframework/cql-execution).
 
-## Code Generation
+## QuickStart: Starter Template for TypeScript Execution
 
-CQLab generates code for each artifact accessible through the API. Just copy and paste the generated code and execute artifcats on your own machines.
+To quickly try out the SDK, clone this environment with TypeScript and ES6 already prepared: [cqlab-sdk-usage-example](https://github.com/cqlabio/cqlab-sdk-usage-example)
 
-Learn more using a detailed walkthrough available in the [docs](https://cqlab.io).
+### Code Generation
+
+The CQLab UI generates SDK code for CQL, ValueSets and TestData. Learn more using a detailed walkthrough available in the [docs](https://cqlab.io).
 
 ## Installation
 
