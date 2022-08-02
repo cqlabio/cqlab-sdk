@@ -31,7 +31,7 @@ const cqlab = new CQLab();
 const libraryVersion = await cqlab.fetchLibraryVersionByName({
   labName: 'cq_examples',
   libraryName: 'CheckMedX',
-  version: 'Draft',
+  version: '0.0.1',
 });
 
 /** Execute your CQL. */
@@ -57,7 +57,7 @@ const cqlab = new CQLab({ apiToken: 'my-token-1234' });
 const libraryVersion = await cqlab.fetchLibraryVersionByName({
   labName: 'cq_examples',
   libraryName: 'CheckMedX',
-  version: 'Draft',
+  version: '0.0.1',
 });
 ```
 
@@ -76,7 +76,7 @@ cqlab
   .fetchLibraryVersionByName({
     labName: 'cq_examples',
     libraryName: 'CheckMedX',
-    version: 'Draft',
+    version: '0.0.1',
   })
   .then((libraryVersion) => {
     console.log(libraryVersion);
